@@ -31,7 +31,7 @@ const App = () => {
     try {
       // Fetch GitHub data
       const githubRes = await axios.get(
-        `http://localhost:3000/api/github/${githubUsername}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/github/${githubUsername}`
       );
       setGithubData({
         userData: githubRes.data.userData,
@@ -41,13 +41,13 @@ const App = () => {
 
       // Fetch LeetCode data
       const leetcodeRes = await axios.get(
-        `http://localhost:3000/api/leetcode/${leetcodeUsername}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/leetcode/${leetcodeUsername}`
       );
       setLeetcodeData(leetcodeRes.data);
 
       // Fetch summary
       const summaryRes = await axios.get(
-        "http://localhost:3000/api/gemini/summary",
+        `${import.meta.env.VITE_BACKEND_URL}/api/gemini/summary`,
         {
           params: { githubUsername, leetcodeUsername },
         }
