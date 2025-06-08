@@ -57,10 +57,10 @@ const ContactUs = () => {
   variants={itemVariants}
 >
   <h2 className="text-2xl font-bold mb-6 text-yellow-900 dark:text-yellow-200">
-    Questions About the Dev Card?
+    Questions About the ByteCard?
   </h2>
   <p className="mb-4">
-    Have a question about the Dev Card, features, or how it works? I'm here to help!
+    Have a question about the ByteCard, features, or how it works? I'm here to help!
     Drop your query below, and I'll get back to you as soon as possible.
   </p>
   <h4 className="font-semibold mb-2">Stay Connected</h4>
